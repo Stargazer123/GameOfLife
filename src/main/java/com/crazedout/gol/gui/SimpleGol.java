@@ -59,6 +59,7 @@ public class SimpleGol extends JPanel {
         f.pack();
         f.setLocationRelativeTo(null);
         f.setVisible(true);
+        f.setResizable(false);
 
     }
 }
