@@ -1,7 +1,6 @@
 package com.crazedout.gol.gui;
 
 import com.crazedout.gol.Cell;
-import com.crazedout.gol.IConfig;
 import com.crazedout.gol.Matrix;
 
 import javax.swing.*;
@@ -14,7 +13,7 @@ public class SimpleGol extends JPanel {
 
     public SimpleGol(){
         matrix = new Matrix();
-        matrix.setConfig(Config.getInstance());
+        matrix.setConfig(Config.getInstance()); // Alt. implement IConfig...
         matrix.reset();
         runner = new Thread(new Runnable() {
             @Override
