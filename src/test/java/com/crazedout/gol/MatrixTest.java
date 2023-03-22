@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MatrixTest {
 
-    Matrix matrix;
+    private Matrix matrix;
     private static final int TESTCELL = 99;
     private static final int TESTCELL2 = 100;
     private int cols = 100;

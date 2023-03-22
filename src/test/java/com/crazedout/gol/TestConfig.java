@@ -2,10 +2,9 @@ package com.crazedout.gol;
 
 public class TestConfig implements IConfig {
 
-    int cols,rows,size,speed,seed;
+    private int cols,rows,size,speed,seed;
 
     TestConfig(){
-
     }
 
     TestConfig(int cols, int rows, int size, int seed, int speed){
@@ -17,24 +16,19 @@ public class TestConfig implements IConfig {
     }
 
     public int getCols(){
-        return cols;
+        return this.cols;
     }
     public int getRows(){
-        return rows;
+        return this.rows;
     }
     public int getSize(){
-        return size;
+        return this.size;
     }
     public int getSpeed(){
-        return speed;
+        return this.speed;
     }
     public int getSeed(){
-        return seed;
+        return this.seed;
     }
-    public void setCols(int cols){}
-    public void setRows(int rows){}
-    public void setSize(int size){}
-    public void setSpeed(int speed){}
-    public void setSeed(int seed){}
 
 }
