@@ -14,6 +14,7 @@ public class GamePanel extends JPanel implements Runnable, IControls, IConfigLis
     private Thread runner;
     private boolean showGrid=true;
 
+
     public GamePanel(){
         super(null);
         setBackground(Color.WHITE);
