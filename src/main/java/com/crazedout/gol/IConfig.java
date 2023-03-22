@@ -8,10 +8,4 @@ public interface IConfig {
     int getSeed();
     int getSpeed();
 
-    void setCols(int cols);
-    void setRows(int rows);
-    void setSize(int size);
-    void setSpeed(int speed);
-    void setSeed(int seed);
-
 }

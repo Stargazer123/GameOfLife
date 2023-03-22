@@ -1,6 +1,7 @@
 package com.crazedout.gol.gui;
 
 import com.crazedout.gol.Cell;
+import com.crazedout.gol.IConfig;
 import com.crazedout.gol.Matrix;
 
 import javax.swing.*;

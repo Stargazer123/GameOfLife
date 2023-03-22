@@ -1,11 +1,9 @@
 package com.crazedout.gol.gui;
 
-import com.crazedout.gol.IConfig;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class Config implements IConfig {
+public class Config implements IConfigMutable {
 
     private static Config instance;
 

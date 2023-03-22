@@ -23,8 +23,8 @@ public class GamePanel extends JPanel implements Runnable, IControls, IConfigLis
             public void componentResized(ComponentEvent e) {
                 super.componentResized(e);
                 runner = null;
-                matrix.getConfig().setCols(getWidth() / matrix.getConfig().getSize());
-                matrix.getConfig().setRows((getHeight() / matrix.getConfig().getSize())-4);
+                ((IConfigMutable)matrix.getConfig()).setCols(getWidth() / matrix.getConfig().getSize());
+                ((IConfigMutable)matrix.getConfig()).setRows((getHeight() / matrix.getConfig().getSize())-4);
                 matrix.reset();
             }
         });
@@ -70,16 +70,12 @@ public class GamePanel extends JPanel implements Runnable, IControls, IConfigLis
         while(runner!=null){
             try{
                 Thread.sleep(matrix.getConfig().getSpeed());
-                tick();
+                matrix.nextLevel();
                 repaint();
             }catch(Exception ex){
                 ex.printStackTrace();
             }
         }
-    }
-
-    private void tick(){
-        matrix.nextLevel();
     }
 
     @Override
