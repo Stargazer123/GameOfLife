@@ -21,6 +21,8 @@ public class GameOfLife extends JFrame implements IConfigListener {
 
     public static void main(String[] argv) throws Exception{
 
+        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+
         GamePanel gamePanel = new GamePanel();
         Config.getInstance().addConfigListener(gamePanel);
         ControlPanel controlPanel = new ControlPanel(gamePanel);
