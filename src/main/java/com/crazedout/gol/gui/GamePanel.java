@@ -32,8 +32,10 @@ public class GamePanel extends JPanel implements Runnable, IControls, IConfigLis
 
     @Override
     public void start(){
-        this.runner = new Thread(this);
-        this.runner.start();
+        if(runner==null) {
+            this.runner = new Thread(this);
+            this.runner.start();
+        }
     }
 
     @Override
