@@ -46,7 +46,7 @@ public class Matrix {
         return this.cells;
     }
 
-    boolean getCellStatus(Cell c){
+    boolean getCellStatus(final Cell c){
         int cnt = getBuddyCount(c);
         if(c.isAlive()){
             if(cnt<2) return false;

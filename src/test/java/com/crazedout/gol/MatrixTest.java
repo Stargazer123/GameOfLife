@@ -37,10 +37,11 @@ class MatrixTest {
     @Test
     void testCells() {
         matrix.reset();
-        matrix.getCellStatus(matrix.getCells().get(TESTCELL));
-        matrix.getCellStatus(matrix.getCells().get(TESTCELL2));
-        matrix.getBuddyCount(matrix.getCells().get(TESTCELL));
-        matrix.getBuddyCount(matrix.getCells().get(TESTCELL2));
+        assertFalse(matrix.getCellStatus(matrix.getCells().get(TESTCELL)));
+        assertFalse(matrix.getCellStatus(matrix.getCells().get(TESTCELL2)));
+        matrix.getCells().get(TESTCELL).setAlive(true);
+        assertTrue(matrix.getBuddyCount(matrix.getCells().get(TESTCELL))==0);
+        assertTrue(matrix.getBuddyCount(matrix.getCells().get(TESTCELL2))==1);
     }
 
     @Test
