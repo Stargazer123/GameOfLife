@@ -8,8 +8,8 @@ import java.awt.*;
 
 public class SimpleGol extends JPanel {
 
-    Matrix matrix;
-    Thread runner;
+    private Matrix matrix;
+    private Thread runner;
 
     public SimpleGol(){
         matrix = new Matrix();

@@ -7,9 +7,9 @@ import java.awt.event.ActionListener;
 
 public class ControlPanel extends JPanel implements ActionListener {
 
-    JButton start,stop,reset,config;
-    JCheckBox gridBox;
-    IControls controls;
+    private JButton start,stop,reset,config;
+    private JCheckBox gridBox;
+    private IControls controls;
 
     public ControlPanel(IControls controls){
         super(new FlowLayout(FlowLayout.CENTER));

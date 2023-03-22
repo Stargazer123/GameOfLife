@@ -14,4 +14,5 @@ java -cp "target/GameOfLife-1.0-SNAPSHOT-jar-with-dependencies.jar" com.crazedou
 Run GUI:
 Dubble click on file "target/GameOfLife-1.0-SNAPSHOT-jar-with-dependencies.jar"
 
-
+A basic implementation:
+java -cp "target/GameOfLife-1.0-SNAPSHOT-jar-with-dependencies.jar" com.crazedout.gol.gui.SimpleGol

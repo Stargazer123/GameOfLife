@@ -1,6 +1,5 @@
 package com.crazedout.gol;
 
-import javax.swing.border.MatteBorder;
 import java.util.ArrayList;
 import java.util.List;
 

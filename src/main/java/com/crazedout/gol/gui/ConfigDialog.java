@@ -7,8 +7,7 @@ import static javax.swing.JOptionPane.ERROR_MESSAGE;
 public class ConfigDialog {
 
     private static ConfigDialog instance;
-
-    JTextField colsText,rowsText,sizeText,seedText,speedText;
+    private JTextField colsText,rowsText,sizeText,seedText,speedText;
 
     private ConfigDialog(){
         colsText = new JTextField(""+ Config.getInstance().getCols());
@@ -49,7 +48,7 @@ public class ConfigDialog {
                 Config.getInstance().setSpeed(speed);
                 Config.getInstance().fireConfigChanged();
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, "Bad input: reverting to prevoius configuration", ex.getMessage(), ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Bad input: reverting to previous configuration", ex.getMessage(), ERROR_MESSAGE);
             }
 
         }

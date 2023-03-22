@@ -14,7 +14,6 @@ public class GamePanel extends JPanel implements Runnable, IControls, IConfigLis
     private Thread runner;
     private boolean showGrid=true;
 
-
     public GamePanel(){
         super(null);
         setBackground(Color.WHITE);
@@ -31,15 +30,18 @@ public class GamePanel extends JPanel implements Runnable, IControls, IConfigLis
         });
     }
 
+    @Override
     public void start(){
         this.runner = new Thread(this);
         this.runner.start();
     }
 
+    @Override
     public void stop(){
         runner = null;
     }
 
+    @Override
     public void reset(){
         this.runner = null;
         this.matrix.reset();
@@ -51,10 +53,12 @@ public class GamePanel extends JPanel implements Runnable, IControls, IConfigLis
         reset();
     }
 
+    @Override
     public boolean isGridVisible(){
         return this.showGrid;
     }
 
+    @Override
     public void setGridVisible(boolean visible){
         this.showGrid=visible;
         repaint();
